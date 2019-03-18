@@ -1,14 +1,11 @@
 package com.example.mvpexample.UI.splash;
 
-import android.app.Activity;
-import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import com.example.mvpexample.Data.DataManager;
-import com.example.mvpexample.Data.SharedPrefsHelper;
 import com.example.mvpexample.MyApp;
 import com.example.mvpexample.R;
 import com.example.mvpexample.UI.login.LoginActivity;
@@ -29,6 +26,7 @@ public class SplashActivity extends AppCompatActivity implements SplashMvpView{
         DataManager dataManager = ((MyApp) getApplication()).getDataManager();
         SplashPresenter splashPresenter = new SplashPresenter(dataManager);
         splashPresenter.onAttach(this);
+        //
         splashPresenter.decideNextActivity();
     }
 
