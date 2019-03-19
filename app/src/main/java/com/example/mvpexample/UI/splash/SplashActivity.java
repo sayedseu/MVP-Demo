@@ -26,7 +26,6 @@ public class SplashActivity extends AppCompatActivity implements SplashMvpView{
         DataManager dataManager = ((MyApp) getApplication()).getDataManager();
         SplashPresenter splashPresenter = new SplashPresenter(dataManager);
         splashPresenter.onAttach(this);
-        //
         splashPresenter.decideNextActivity();
     }
 
